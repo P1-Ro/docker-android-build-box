@@ -30,15 +30,14 @@ RUN apk --no-cache add \
         curl > /dev/null
 
 # Install Android SDK
+# Please keep these in descending order!
+# The `yes` is for accepting all non-standard tool licenses.
 RUN echo "Installing sdk tools ${ANDROID_SDK_TOOLS_VERSION}" && \
     wget --quiet --output-document=sdk-tools.zip \
         "https://dl.google.com/android/repository/sdk-tools-linux-${ANDROID_SDK_TOOLS_VERSION}.zip" && \
     mkdir --parents "$ANDROID_HOME" && \
     unzip -q sdk-tools.zip -d "$ANDROID_HOME" && \
     rm --force sdk-tools.zip && \
-# Install SDKs
-# Please keep these in descending order!
-# The `yes` is for accepting all non-standard tool licenses.
     mkdir --parents "$ANDROID_HOME/.android/" && \
     echo '### User Sources for Android SDK Manager' > \
         "$ANDROID_HOME/.android/repositories.cfg" && \

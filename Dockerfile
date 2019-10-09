@@ -53,7 +53,7 @@ RUN echo "Installing sdk tools ${ANDROID_SDK_TOOLS_VERSION}" && \
         "platforms;android-24" \
         "platforms;android-23" \
         "platforms;android-22" \
-        "platforms;android-21" \ > /dev/null && \
+        "platforms;android-21" > /dev/null && \
     echo "Installing platform tools " && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "platform-tools" > /dev/null && \

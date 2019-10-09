@@ -2,8 +2,7 @@ FROM adoptopenjdk/openjdk8:alpine-slim
 
 MAINTAINER Ming Chen & Jozef Dochan
 
-ENV ANDROID_HOME="/opt/android-sdk" \
-    JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+ENV ANDROID_HOME="/opt/android-sdk"
 
 # Get the latest version from https://developer.android.com/studio/index.html
 ENV ANDROID_SDK_TOOLS_VERSION="4333796"
@@ -76,7 +75,7 @@ RUN echo "Installing sdk tools ${ANDROID_SDK_TOOLS_VERSION}" && \
         "add-ons;addon-google_apis-google-24" \
         "add-ons;addon-google_apis-google-23" \
         "add-ons;addon-google_apis-google-22" \
-        "add-ons;addon-google_apis-google-21" > /dev/null
+        "add-ons;addon-google_apis-google-21" > /dev/null 
 
 
 # Copy sdk license agreement files.

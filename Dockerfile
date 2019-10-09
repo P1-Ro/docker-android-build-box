@@ -13,12 +13,6 @@ ENV LANG="en_US.UTF-8" \
     LANGUAGE="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8"
 
-RUN apt-get clean && apt-get update -qq && apt-get install -qq -y apt-utils locales && locale-gen $LANG
-
-ENV DEBIAN_FRONTEND="noninteractive" \
-    TERM=dumb \
-    DEBIAN_FRONTEND=noninteractive
-
 # Variables must be references after they are created
 ENV ANDROID_SDK_HOME="$ANDROID_HOME"
 
@@ -29,18 +23,9 @@ COPY README.md /README.md
 WORKDIR /tmp
 
 # Installing packages
-RUN apt-get update -qq > /dev/null && \
-    apt-get install -qq locales > /dev/null && \
-    locale-gen "$LANG" > /dev/null && \
-    apt-get install -qq --no-install-recommends \
-        curl \
-        git \
-        openssh-client \
-        pkg-config \
-        software-properties-common \
-        unzip \
-        wget \
-        zip \ > /dev/null
+RUN apk --no-cache add \
+	    jq \
+        curl > /dev/null
 
 # Install Android SDK
 RUN echo "Installing sdk tools ${ANDROID_SDK_TOOLS_VERSION}" && \

@@ -25,6 +25,8 @@ WORKDIR /tmp
 # Installing packages
 RUN apk --no-cache add \
 	    jq \
+		wget \ 
+		unzip \ 
         curl > /dev/null
 
 # Install Android SDK

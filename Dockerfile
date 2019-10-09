@@ -23,7 +23,8 @@ COPY README.md /README.md
 WORKDIR /tmp
 
 # Installing packages
-RUN apk --no-cache add \
+RUN apk update && \
+	apk add --no-cache \
 	    jq \
 		wget \ 
 		unzip \ 

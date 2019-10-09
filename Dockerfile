@@ -40,7 +40,7 @@ RUN apt-get update -qq > /dev/null && \
         software-properties-common \
         unzip \
         wget \
-        zip \ > /dev/null && \
+        zip \ > /dev/null
 
 # Install Android SDK
 RUN echo "Installing sdk tools ${ANDROID_SDK_TOOLS_VERSION}" && \
@@ -74,16 +74,7 @@ RUN echo "Installing sdk tools ${ANDROID_SDK_TOOLS_VERSION}" && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "build-tools;29.0.2" \
         "build-tools;28.0.3" "build-tools;28.0.2" \
-        "build-tools;27.0.3" "build-tools;27.0.2" "build-tools;27.0.1" \
-        "build-tools;26.0.2" "build-tools;26.0.1" "build-tools;26.0.0" \
-        "build-tools;25.0.3" "build-tools;25.0.2" \
-        "build-tools;25.0.1" "build-tools;25.0.0" \
-        "build-tools;24.0.3" "build-tools;24.0.2" \
-        "build-tools;24.0.1" "build-tools;24.0.0" > /dev/null && \
-    echo "Installing build tools " && \
-    yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
-        "build-tools;23.0.3" "build-tools;23.0.2" "build-tools;23.0.1" \
-        "build-tools;22.0.1" \ > /dev/null && \
+        "build-tools;27.0.3" "build-tools;27.0.2" "build-tools;27.0.1" > /dev/null && \
     echo "Installing extras " && \
     yes | "$ANDROID_HOME"/tools/bin/sdkmanager \
         "extras;android;m2repository" \

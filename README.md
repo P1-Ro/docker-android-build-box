@@ -94,7 +94,7 @@ The caches are used to [store downloaded dependencies](https://confluence.atlass
 ## Docker Build Image
 
 If you want to build the docker image by yourself, you can use following command.
-The image itself is more than 5 GB, check your free disk space before building it.
+The image itself is arount 2 GB, check your free disk space before building it.
 
     docker build -t android-build-box .
 

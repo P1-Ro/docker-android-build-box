@@ -2,7 +2,7 @@ language: bash
 services: docker
 
 before_install:
-- echo "$DOCKER_LOGIN" | docker login -u "$DOCKER_PASSWORD" --password-stdin # Set these as environment variables
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_LOGIN" --password-stdin # Set these as environment variables
 - travis_wait 50 docker build -t android-build-box .
 
 script:

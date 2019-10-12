@@ -99,10 +99,7 @@ The image itself is arount 2 GB, check your free disk space before building it.
     docker build -t android-build-box .
 
 ## Tags
-
-### 1.0.0
-
-* Initial release
+Check releases for tags
 
 
 

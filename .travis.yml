@@ -3,17 +3,17 @@ services: docker
 
 before_install:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_LOGIN" --password-stdin # Set these as environment variables
-- travis_wait 50 docker build -t "$HUB_NAME:$TRAVIS_TAG" .
+- travis_wait 50 docker build -t "$HUB_NAME:$TRAVIS_BRANCH" .
 
 script:
-- docker run -it --rm "$HUB_NAME:$TRAVIS_TAG" sdkmanager --version
+- docker run -it --rm "$HUB_NAME:$TRAVIS_BRANCH" sdkmanager --version
 
 after_script:
 - docker images
 
 deploy:
   provider: script
-  script: sudo docker push $HUB_NAME:$TRAVIS_TAG # Set HUB_NAME as environment variables
+  script: sudo docker push $HUB_NAME:$TRAVIS_BRANCH # Set HUB_NAME as environment variables
   on:
     tags: true
     branch: master

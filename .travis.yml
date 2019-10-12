@@ -3,10 +3,10 @@ services: docker
 
 before_install:
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_LOGIN" --password-stdin # Set these as environment variables
-- travis_wait 50 docker build -t android-build-box .
+- travis_wait 50 docker build -t "$HUB_NAME:$TRAVIS_TAG" .
 
 script:
-- docker run -it --rm android-build-box sdkmanager --version
+- docker run -it --rm "$HUB_NAME:$TRAVIS_TAG" sdkmanager --version
 
 after_script:
 - docker images

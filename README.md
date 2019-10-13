@@ -1,9 +1,7 @@
-
-
-
 # Docker Android Build Box
 
 [![Build Status](https://travis-ci.org/P1-Ro/docker-android-build-box.svg?branch=master)](https://travis-ci.org/P1-Ro/docker-android-build-box) [![](https://images.microbadger.com/badges/version/theglow666/android-build-box.svg)](https://microbadger.com/images/theglow666/android-build-box "Get your own version badge on microbadger.com") [![](https://images.microbadger.com/badges/image/theglow666/android-build-box.svg)](https://microbadger.com/images/theglow666/android-build-box "Get your own image badge on microbadger.com")
+
 [![docker icon](https://dockeri.co/image/theglow666/android-build-box)](https://hub.docker.com/r/theglow666/android-build-box/)
 
 

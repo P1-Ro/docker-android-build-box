@@ -70,7 +70,9 @@ RUN echo "Installing sdk tools ${ANDROID_SDK_TOOLS_VERSION}" && \
         "add-ons;addon-google_apis-google-24" \
         "add-ons;addon-google_apis-google-23" \
         "add-ons;addon-google_apis-google-22" \
-        "add-ons;addon-google_apis-google-21" > /dev/null 
+        "add-ons;addon-google_apis-google-21" > /dev/null && \
+    echo "Installing emulator " && \
+    yes | "$ANDROID_HOME"/tools/bin/sdkmanager "emulator" > /dev/null
 
 
 # Copy sdk license agreement files.

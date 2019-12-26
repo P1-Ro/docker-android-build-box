@@ -13,7 +13,8 @@ after_script:
 
 deploy:
   provider: script
-  script: sudo docker push $HUB_NAME:$TRAVIS_BRANCH # Set HUB_NAME as environment variables
+  script: sudo docker push $HUB_NAME:$TRAVIS_BRANCH && \
+  curl -i -X $MICROBADGER_HOOK_URL # Set HUB_NAME as environment variables
   on:
     tags: true
     branch: master

@@ -52,7 +52,7 @@ The docker image is publicly automated build on [Docker Hub](https://hub.docker.
 
     docker pull theglow666/android-build-box:release
 
-**Importannt:** Use actual tag to sepecific a stable version instead of `release`.  Checkout **[Releases](releases)** to see all the available tags.
+**Importannt:** Use actual tag to sepecific a stable version instead of `release`.  Checkout **[Releases](../../releases)** to see all the available tags.
 
 ## Usage
 

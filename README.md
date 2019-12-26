@@ -105,7 +105,7 @@ Check releases for tags
 
 ## Contribution
 
-If you want to enhance this docker image or fix something, feel free to send [pull request](https://github.com/theglow666/docker-android-build-box/pull/new/master).
+If you want to enhance this docker image or fix something, feel free to send [pull request](https://github.com/P1-Ro/docker-android-build-box/pull/new/master).
 
 
 ## References

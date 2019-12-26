@@ -50,9 +50,9 @@ It includes the following components:
 
 The docker image is publicly automated build on [Docker Hub](https://hub.docker.com/r/theglow666/android-build-box/) based on the Dockerfile in this repo, so there is no hidden stuff in it. To pull the latest docker image:
 
-    docker pull theglow666/android-build-box:tagname
+    docker pull theglow666/android-build-box:release
 
-**Importannt:** Use actual tag to sepecific a stable version instead of `tagname`.  Checkout **Tags** (bottom of this page) to see all the available tags.
+**Importannt:** Use actual tag to sepecific a stable version instead of `release`.  Checkout **[Releases](/releases)** to see all the available tags.
 
 ## Usage
 
